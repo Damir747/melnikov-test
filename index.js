@@ -1,7 +1,7 @@
 const axios = require('axios');
 const { MongoClient } = require('mongodb');
 
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb://mongo:27017'; // замена localhost на mongo
 const dbName = 'eosTracker';
 const client = new MongoClient(url);
 
