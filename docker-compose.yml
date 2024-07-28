@@ -1,15 +1,15 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    environment:
-      MONGODB_URI: mongodb://mongo:27017/eosTracker
+      - "3000:3000"  # или другой порт, который использует ваше приложение
     depends_on:
       - mongo
 
   mongo:
-    image: mongo:6.0
+    image: mongo:5.0
     ports:
       - "27017:27017"
     volumes:
